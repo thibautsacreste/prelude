@@ -7,6 +7,9 @@
 ;;; Code:
 (prelude-require-packages '(monokai-theme clj-refactor))
 
+;; Allow typing # symbol on UK keyboard  
+(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
+
 ;; move between windows with Shift+arrows
 (windmove-default-keybindings)
 (setq windmove-wrap-around t)
