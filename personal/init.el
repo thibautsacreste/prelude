@@ -7,7 +7,7 @@
 ;;; Code:
 (prelude-require-packages '(clj-refactor))
 
-;; Allow typing # symbol on UK keyboard  
+;; Allow typing # symbol on UK keyboard
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
 ;; move between windows with Shift+arrows
@@ -19,5 +19,9 @@
 (add-hook 'clojure-mode-hook (lambda ()
                                (clj-refactor-mode 1)
                                (cljr-add-keybindings-with-prefix "C-c C-m")))
+
+;; whitespace-mode: don't show lines that are too long
+;; by ommiting the lines-tail style
+(setq whitespace-style '(face tabs empty trailing))
 
 ;;; init.el ends here
