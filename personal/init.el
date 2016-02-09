@@ -5,7 +5,7 @@
 ;;
 
 ;;; Code:
-(prelude-require-packages '(clj-refactor))
+(prelude-require-packages '(hydra clj-refactor))
 
 ;; Allow typing # symbol on UK keyboard
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
